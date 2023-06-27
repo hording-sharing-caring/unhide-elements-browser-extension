@@ -1,0 +1,23 @@
+{
+
+    "manifest_version": 2,
+    "name": "Unhide elements",
+   "description": "This extension removes hide tag from html elements",
+   "version": "1.0",
+   "content_scripts": [
+    {
+       //Set your address you want the extension will work in mataches!!! 
+    "matches": ["http://*.cloudapp.azure.com/Skate/*", "https://*.cloudapp.azure.com/Skate/*"],
+     "js": ["jquery.min.js","content.js"],
+     "run_at": "document_end"
+    }
+   ],  
+   "permissions": [
+                 "activeTab"
+                ],
+    "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+    }
+   
+   }
